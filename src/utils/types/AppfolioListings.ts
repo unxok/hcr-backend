@@ -1,25 +1,27 @@
-export type AppfolioListings = {
+import { Nullable } from ".";
+
+export type AppfolioListings = Nullable<{
 	fields: any;
 	filters: any;
 	language: any;
 	name: "appfolio-listings";
-	page: {
+	page: Nullable<{
 		pageSize: number;
 		pageNumber: number;
 		totalPages: number;
 		totalItems: number;
-	};
+	}>;
 	search: any;
-	sortBy: null;
+	sortBy: any;
 	values: Values[];
-};
+}>;
 
-export type Values = {
+export type Values = Nullable<{
 	data?: Data;
 	page_item_url?: string;
-};
+}>;
 
-export type Data = {
+export type Data = Nullable<{
 	google_map_url?: string;
 	address_latitude?: number;
 	database_url?: string;
@@ -40,7 +42,7 @@ export type Data = {
 	id?: number;
 	property_uid?: string;
 	payee_account_number_token?: string;
-	posted_to_website_at?: Date;
+	posted_to_website_at?: string;
 	contact_phone_number?: string;
 	payee_routing_number?: string;
 	revenue_management_property?: boolean;
@@ -69,11 +71,11 @@ export type Data = {
 	appliances?: string;
 	// by_the_bed?: boolean;
 	address_state?: string;
-	created_at?: Date;
+	created_at?: string;
 	marketing_title?: string;
 	// unit_template_name?: null;
 	default_photo_thumbnail_url?: string;
-	updated_at?: Date;
+	updated_at?: string;
 	fee_label?: string;
 	address_longitude?: number;
 	property_type?: string;
@@ -85,7 +87,7 @@ export type Data = {
 	database_name?: string;
 	address_postal_code?: string;
 	address_country?: string;
-	available_date?: Date;
+	available_date?: string;
 	portfolio_name?: string;
 	marketing_description?: string;
 	address_city?: string;
@@ -97,7 +99,7 @@ export type Data = {
 	portfolio_state?: string;
 	location?: Location;
 	schedule_showing_url?: string;
-};
+}>;
 
 export type Location = {
 	address?: Address;
