@@ -1,0 +1,22 @@
+{
+	"name": "hcr-backend",
+	"version": "0.0.1",
+	"description": "Backend for hcr",
+	"main": "index.js",
+	"scripts": {
+		"dev": "tsx watch ./src/main.ts",
+		"start": "tsx ./src/main.ts"
+	},
+	"author": "Unxok",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/express": "^4.17.21",
+		"tsx": "^4.15.5"
+	},
+	"dependencies": {
+		"cron": "^3.1.7",
+		"express": "^4.19.2",
+		"puppeteer": "^22.11.0",
+		"typescript": "^5.4.5"
+	}
+}
