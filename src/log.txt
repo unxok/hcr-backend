@@ -19,3 +19,18 @@ Ticked cron
 6/14/2024, 10:53:12 PM
 Ticked cron
 
+6/15/2024, 4:01:50 PM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies: [object Object] 400 Bad Request
+
+6/15/2024, 4:03:16 PM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies: [object Object] 400 Bad Request
+
+6/15/2024, 4:06:51 PM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies: null 201 Created
+
+6/15/2024, 4:07:23 PM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies: null 200 OK
+
+6/15/2024, 4:08:23 PM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies: null 200 OK
+
