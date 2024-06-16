@@ -71,6 +71,7 @@ const parseListings = (listings: AppfolioListings["values"], pmId: number) => {
 				listable_uid: data?.listable_uid,
 				property_management_id: pmId,
 				pm_listable_uid: pmId + "-" + data?.listable_uid,
+				square_feet: data?.square_feet ?? 0,
 			};
 		});
 	return arr;
@@ -111,7 +112,7 @@ app.listen(port, async () => {
 		await logger(msg);
 		return;
 	}
-	console.log(pmQuery.data);
+	// console.log(pmQuery.data);
 	pmQuery.data.forEach(async ({ id, listings_url }) => {
 		console.log("scrape started on " + listings_url);
 		await scrape(listings_url, id, async (listings) => {

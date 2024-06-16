@@ -34,3 +34,15 @@ Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies: null 200 OK
 6/15/2024, 4:08:23 PM
 Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies: null 200 OK
 
+6/15/2024, 8:08:36 PM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies: null 200 OK
+
+6/15/2024, 8:08:36 PM
+Upsert finished for pm 2 https://www.rentor.com/availability: null 201 Created
+
+6/16/2024, 2:41:51 AM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies: null 200 OK
+
+6/16/2024, 2:41:51 AM
+Upsert finished for pm 2 https://www.rentor.com/availability: null 200 OK
+

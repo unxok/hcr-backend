@@ -32,6 +32,7 @@ export type Database = {
           photos: Json | null
           pm_listable_uid: string
           property_management_id: number | null
+          square_feet: number | null
         }
         Insert: {
           address_address1?: string | null
@@ -55,6 +56,7 @@ export type Database = {
           photos?: Json | null
           pm_listable_uid: string
           property_management_id?: number | null
+          square_feet?: number | null
         }
         Update: {
           address_address1?: string | null
@@ -78,6 +80,7 @@ export type Database = {
           photos?: Json | null
           pm_listable_uid?: string
           property_management_id?: number | null
+          square_feet?: number | null
         }
         Relationships: [
           {
@@ -92,25 +95,31 @@ export type Database = {
       property_managements: {
         Row: {
           accent_color: string
+          accent_color_foreground: string
           created_at: string
           display_name: string
           id: number
+          listing_item_url: string
           listings_url: string
           logo_url: string
         }
         Insert: {
           accent_color: string
+          accent_color_foreground?: string
           created_at?: string
           display_name: string
           id?: number
+          listing_item_url: string
           listings_url: string
           logo_url: string
         }
         Update: {
           accent_color?: string
+          accent_color_foreground?: string
           created_at?: string
           display_name?: string
           id?: number
+          listing_item_url?: string
           listings_url?: string
           logo_url?: string
         }
@@ -136,7 +145,12 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      distinct_cities: {
+        Row: {
+          address_city: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       [_ in never]: never
