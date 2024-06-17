@@ -46,3 +46,123 @@ Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies: null 200 OK
 6/16/2024, 2:41:51 AM
 Upsert finished for pm 2 https://www.rentor.com/availability: null 200 OK
 
+6/16/2024, 9:32:26 PM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies: null 200 OK
+
+6/16/2024, 9:32:26 PM
+Upsert finished for pm 2 https://www.rentor.com/availability: null 200 OK
+
+6/16/2024, 10:15:04 PM
+Failed to update listings
+Error code 400 Bad Request
+Error: [object Object]
+
+6/16/2024, 10:18:28 PM
+Failed to update listings
+Error code 400 Bad Request
+Error: [object Object]
+
+6/16/2024, 10:19:09 PM
+Failed to update listings
+Error code 400 Bad Request
+Error: [object Object]
+
+6/16/2024, 10:20:47 PM
+Failed to update listings
+Error code 400 Bad Request
+Error: [object Object]
+
+6/16/2024, 10:25:52 PM
+Failed to update listings
+Error code 400 Bad Request
+Error: {
+  "code": "21000",
+  "details": null,
+  "hint": null,
+  "message": "UPDATE requires a WHERE clause"
+}
+
+6/16/2024, 10:29:26 PM
+Failed to update listings
+Error code 400 Bad Request
+Error: {
+  "code": "22P02",
+  "details": null,
+  "hint": null,
+  "message": "invalid input syntax for type bigint: \"null\""
+}
+
+6/16/2024, 10:36:50 PM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/16/2024, 10:36:50 PM
+Upsert finished for pm 2 https://www.rentor.com/availability
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/16/2024, 10:38:56 PM
+Upsert finished for pm 2 https://www.rentor.com/availability
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/16/2024, 10:38:56 PM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/16/2024, 10:47:48 PM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 401
+STATUS TEXT: Unauthorized
+ERROR: {
+  "code": "42501",
+  "details": null,
+  "hint": null,
+  "message": "new row violates row-level security policy for table \"listings\""
+}
+
+6/16/2024, 10:47:48 PM
+Upsert finished for pm 2 https://www.rentor.com/availability
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 401
+STATUS TEXT: Unauthorized
+ERROR: {
+  "code": "42501",
+  "details": null,
+  "hint": null,
+  "message": "new row violates row-level security policy for table \"listings\""
+}
+
+6/16/2024, 10:48:42 PM
+Upsert finished for pm 2 https://www.rentor.com/availability
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/16/2024, 10:48:43 PM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
