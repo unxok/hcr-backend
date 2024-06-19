@@ -13,22 +13,16 @@ import { createClient } from "@supabase/supabase-js";
 import { Database } from "./utils/types/supabase";
 
 const app = express();
-const port = 3000;
-
-const loop = async () => {
-	console.log(new Date().toTimeString());
-	await new Promise<void>((res, rej) => {
-		setTimeout(() => {
-			res();
-		}, 3000);
-	});
-	loop();
-};
+const port = 3001;
 
 const scrape = async (
 	pmListingsUrl: string,
 	pmId: number,
-	createdAtMap: Record<string, string>,
+	prevRows: {
+		pm_listable_uid: string;
+		created_at: string;
+		admin_hidden: boolean;
+	}[],
 	callback: (
 		listings: Omit<Database["public"]["Tables"]["listings"]["Row"], "id">[]
 	) => void | Promise<void>
@@ -41,7 +35,7 @@ const scrape = async (
 		const appfolioListings = assert<AppfolioListings>(json);
 		const listings = appfolioListings?.values;
 		if (!listings) return [];
-		const parsed = parseListings(listings, pmId, createdAtMap);
+		const parsed = parseListings(listings, pmId, prevRows);
 		await callback(parsed);
 	});
 
@@ -54,14 +48,23 @@ const scrape = async (
 const parseListings = (
 	listings: AppfolioListings["values"],
 	pmId: number,
-	createdAtMap: Record<string, string>
+	prevRows: {
+		pm_listable_uid: string;
+		created_at: string;
+		admin_hidden: boolean;
+	}[]
 ) => {
 	if (!listings) return [];
+
 	const arr: Omit<Database["public"]["Tables"]["listings"]["Row"], "id">[] =
 		listings.map(({ data }) => {
 			if (!data?.listable_uid) throw new Error("No listable_uid found");
 			const pmListableUid = pmId + "-" + data?.listable_uid;
+			const prev =
+				prevRows.find((v) => v.pm_listable_uid === pmListableUid) ?? null;
 			const now = new Date().toISOString();
+			const state = data?.full_address?.split(" ").reverse()[1];
+			console.log("got state from ", data?.full_address, " : ", state);
 			return {
 				address_address1: data?.address_address1 ?? null,
 				address_address2: data?.address_address2 ?? null,
@@ -69,16 +72,20 @@ const parseListings = (
 					data?.address_city ?? "City Unlisted",
 					" "
 				),
+				address_state:
+					data?.address_state ||
+					data?.full_address?.split(" ").reverse()[1] ||
+					null,
 				address_country: data?.address_country ?? null,
 				address_latitude: data?.address_latitude?.toString() ?? null,
 				address_longitude: data?.address_longitude?.toString() ?? null,
 				full_address: data?.full_address ?? null,
 				available_date: data?.available_date ?? null,
-				deposit: data?.deposit ?? null,
-				market_rent: data?.market_rent ?? null,
+				deposit: data?.deposit ?? 0,
+				market_rent: data?.market_rent ?? 0,
 				marketing_title: data?.marketing_title ?? null,
-				bathrooms: data?.bathrooms ?? null,
-				bedrooms: data?.bedrooms ?? null,
+				bathrooms: data?.bathrooms ?? 0,
+				bedrooms: data?.bedrooms ?? 0,
 				cats: data?.cats === "Cats not allowed" ? false : true,
 				dogs: data?.dogs === "Dogs not allowed" ? false : true,
 				default_photo_thumbnail_url: data?.default_photo_thumbnail_url ?? null,
@@ -89,7 +96,8 @@ const parseListings = (
 				square_feet: data?.square_feet ?? 0,
 				unlisted_at: null,
 				updated_at: new Date().toISOString(),
-				created_at: createdAtMap[pmListableUid] ?? now,
+				created_at: prev?.created_at ?? now,
+				admin_hidden: prev?.admin_hidden ?? false,
 			};
 		});
 	return arr;
@@ -131,7 +139,7 @@ app.listen(port, async () => {
 		.from("listings")
 		.update({ unlisted_at: new Date().toISOString() })
 		.gt("id", -1)
-		.select("pm_listable_uid, created_at");
+		.select("pm_listable_uid, created_at, admin_hidden");
 	if (unlistQuery.error) {
 		const msg =
 			`Failed to update listings\n` + getSupabaseResultString(unlistQuery);
@@ -140,13 +148,7 @@ app.listen(port, async () => {
 		return;
 	}
 
-	const createdAtMap = unlistQuery.data.reduce<Record<string, string>>(
-		(acc, { pm_listable_uid, created_at }) => ({
-			...acc,
-			[pm_listable_uid]: created_at,
-		}),
-		{}
-	);
+	const prevRows = unlistQuery.data;
 	const pmQuery = await supabase.from("property_managements").select("*");
 	if (pmQuery.error) {
 		const msg =
@@ -159,7 +161,7 @@ app.listen(port, async () => {
 	// console.log(pmQuery.data);
 	pmQuery.data.forEach(async ({ id, listings_url }) => {
 		console.log("scrape started on " + listings_url);
-		await scrape(listings_url, id, createdAtMap, async (listings) => {
+		await scrape(listings_url, id, prevRows, async (listings) => {
 			const upsert = await supabase.from("listings").upsert(listings, {
 				onConflict: "pm_listable_uid",
 			});

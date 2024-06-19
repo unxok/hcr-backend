@@ -166,3 +166,195 @@ STATUS: 200
 STATUS TEXT: OK
 ERROR: null
 
+6/17/2024, 11:36:31 PM
+Upsert finished for pm 4 https://www.jlfpm.net/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 201
+STATUS TEXT: Created
+ERROR: null
+
+6/17/2024, 11:36:31 PM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/17/2024, 11:36:31 PM
+Upsert finished for pm 6 https://www.wolfepropertymanagement.com/availability
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 201
+STATUS TEXT: Created
+ERROR: null
+
+6/17/2024, 11:36:31 PM
+Upsert finished for pm 2 https://www.rentor.com/availability
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 201
+STATUS TEXT: Created
+ERROR: null
+
+6/17/2024, 11:36:31 PM
+Upsert finished for pm 5 https://www.pacificcoast.rentals/current-listings
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 201
+STATUS TEXT: Created
+ERROR: null
+
+6/17/2024, 11:36:32 PM
+Upsert finished for pm 3 https://imsrentals.com/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 201
+STATUS TEXT: Created
+ERROR: null
+
+6/18/2024, 2:03:12 AM
+Upsert finished for pm 4 https://www.jlfpm.net/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:03:12 AM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:03:12 AM
+Upsert finished for pm 5 https://www.pacificcoast.rentals/current-listings
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:03:12 AM
+Upsert finished for pm 2 https://www.rentor.com/availability
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:03:12 AM
+Upsert finished for pm 6 https://www.wolfepropertymanagement.com/availability
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:03:12 AM
+Upsert finished for pm 3 https://imsrentals.com/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:05:06 AM
+Upsert finished for pm 6 https://www.wolfepropertymanagement.com/availability
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:05:06 AM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:05:06 AM
+Upsert finished for pm 3 https://imsrentals.com/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:05:06 AM
+Upsert finished for pm 4 https://www.jlfpm.net/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:05:07 AM
+Upsert finished for pm 2 https://www.rentor.com/availability
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:05:07 AM
+Upsert finished for pm 5 https://www.pacificcoast.rentals/current-listings
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:27:53 AM
+Upsert finished for pm 4 https://www.jlfpm.net/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:27:53 AM
+Upsert finished for pm 2 https://www.rentor.com/availability
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:27:53 AM
+Upsert finished for pm 6 https://www.wolfepropertymanagement.com/availability
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:27:53 AM
+Upsert finished for pm 5 https://www.pacificcoast.rentals/current-listings
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:27:53 AM
+Upsert finished for pm 1 https://www.humboldtrentals.com/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
+6/18/2024, 2:27:53 AM
+Upsert finished for pm 3 https://imsrentals.com/vacancies
+DATA LENGTH: undefined
+COUNT: null
+STATUS: 200
+STATUS TEXT: OK
+ERROR: null
+
